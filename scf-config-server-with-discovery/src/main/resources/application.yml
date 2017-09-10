@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/vdawar/config-repo.git
+      label: master
+  application:
+    name: configserver
+
+
+eureka:
+  client: 
+    service-url:
+      defaultZone: http://localhost:8762/eureka,http://localhost:8761/eureka
